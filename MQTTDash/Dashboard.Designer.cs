@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblCupStatus = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,30 +41,32 @@
             this.lblBACStatus = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.gbMixer = new System.Windows.Forms.GroupBox();
+            this.lblMixerWarning = new System.Windows.Forms.Label();
+            this.pbWeight = new System.Windows.Forms.ProgressBar();
             this.lblWeight = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblStatusMixer = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pbWeight = new System.Windows.Forms.ProgressBar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblTempWarning = new System.Windows.Forms.Label();
+            this.pbTemp = new System.Windows.Forms.ProgressBar();
             this.lblTemp = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pbTemp = new System.Windows.Forms.ProgressBar();
-            this.lblTempWarning = new System.Windows.Forms.Label();
-            this.lblMixerWarning = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblConcentration2 = new System.Windows.Forms.Label();
             this.lblConcentration1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblCupSize = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblConcentration2 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mqttMsgUnsubscribeEventArgsBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.gbMixer.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -179,6 +182,25 @@
             this.gbMixer.TabStop = false;
             this.gbMixer.Text = "Mixer";
             // 
+            // lblMixerWarning
+            // 
+            this.lblMixerWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblMixerWarning.Location = new System.Drawing.Point(37, 72);
+            this.lblMixerWarning.Name = "lblMixerWarning";
+            this.lblMixerWarning.Size = new System.Drawing.Size(127, 13);
+            this.lblMixerWarning.TabIndex = 6;
+            this.lblMixerWarning.Text = "Warning - System fault!";
+            this.lblMixerWarning.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblMixerWarning.Visible = false;
+            // 
+            // pbWeight
+            // 
+            this.pbWeight.Location = new System.Drawing.Point(9, 46);
+            this.pbWeight.Maximum = 110;
+            this.pbWeight.Name = "pbWeight";
+            this.pbWeight.Size = new System.Drawing.Size(185, 23);
+            this.pbWeight.TabIndex = 4;
+            // 
             // lblWeight
             // 
             this.lblWeight.ForeColor = System.Drawing.Color.Red;
@@ -220,14 +242,6 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Status";
             // 
-            // pbWeight
-            // 
-            this.pbWeight.Location = new System.Drawing.Point(9, 46);
-            this.pbWeight.Maximum = 110;
-            this.pbWeight.Name = "pbWeight";
-            this.pbWeight.Size = new System.Drawing.Size(185, 23);
-            this.pbWeight.TabIndex = 4;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lblTempWarning);
@@ -240,6 +254,25 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cooling";
+            // 
+            // lblTempWarning
+            // 
+            this.lblTempWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblTempWarning.Location = new System.Drawing.Point(37, 58);
+            this.lblTempWarning.Name = "lblTempWarning";
+            this.lblTempWarning.Size = new System.Drawing.Size(127, 13);
+            this.lblTempWarning.TabIndex = 5;
+            this.lblTempWarning.Text = "Warning - System fault!";
+            this.lblTempWarning.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTempWarning.Visible = false;
+            // 
+            // pbTemp
+            // 
+            this.pbTemp.Location = new System.Drawing.Point(9, 32);
+            this.pbTemp.Maximum = 30;
+            this.pbTemp.Name = "pbTemp";
+            this.pbTemp.Size = new System.Drawing.Size(185, 23);
+            this.pbTemp.TabIndex = 5;
             // 
             // lblTemp
             // 
@@ -262,36 +295,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Temperature";
             // 
-            // pbTemp
-            // 
-            this.pbTemp.Location = new System.Drawing.Point(9, 32);
-            this.pbTemp.Maximum = 30;
-            this.pbTemp.Name = "pbTemp";
-            this.pbTemp.Size = new System.Drawing.Size(185, 23);
-            this.pbTemp.TabIndex = 5;
-            // 
-            // lblTempWarning
-            // 
-            this.lblTempWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblTempWarning.Location = new System.Drawing.Point(37, 58);
-            this.lblTempWarning.Name = "lblTempWarning";
-            this.lblTempWarning.Size = new System.Drawing.Size(127, 13);
-            this.lblTempWarning.TabIndex = 5;
-            this.lblTempWarning.Text = "Warning - System fault!";
-            this.lblTempWarning.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblTempWarning.Visible = false;
-            // 
-            // lblMixerWarning
-            // 
-            this.lblMixerWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblMixerWarning.Location = new System.Drawing.Point(37, 72);
-            this.lblMixerWarning.Name = "lblMixerWarning";
-            this.lblMixerWarning.Size = new System.Drawing.Size(127, 13);
-            this.lblMixerWarning.TabIndex = 6;
-            this.lblMixerWarning.Text = "Warning - System fault!";
-            this.lblMixerWarning.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblMixerWarning.Visible = false;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label2);
@@ -306,6 +309,26 @@
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "UI";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Concentration 2";
+            // 
+            // lblConcentration2
+            // 
+            this.lblConcentration2.ForeColor = System.Drawing.Color.Red;
+            this.lblConcentration2.Location = new System.Drawing.Point(165, 42);
+            this.lblConcentration2.Name = "lblConcentration2";
+            this.lblConcentration2.Size = new System.Drawing.Size(29, 13);
+            this.lblConcentration2.TabIndex = 4;
+            this.lblConcentration2.Text = "NaN";
+            this.lblConcentration2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblConcentration1
             // 
@@ -348,31 +371,23 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Cup Size (ml)";
             // 
-            // lblConcentration2
+            // pictureBox1
             // 
-            this.lblConcentration2.ForeColor = System.Drawing.Color.Red;
-            this.lblConcentration2.Location = new System.Drawing.Point(165, 42);
-            this.lblConcentration2.Name = "lblConcentration2";
-            this.lblConcentration2.Size = new System.Drawing.Size(29, 13);
-            this.lblConcentration2.TabIndex = 4;
-            this.lblConcentration2.Text = "NaN";
-            this.lblConcentration2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Concentration 2";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(219, 225);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(271, 273);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 512);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.gbMixer);
@@ -392,6 +407,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,6 +443,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblConcentration2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
